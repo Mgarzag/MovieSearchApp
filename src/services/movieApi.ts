@@ -3,7 +3,7 @@ import type { Movie } from "../types/Movie";
 const API_KEY = import.meta.env.VITE_API_KEY;
 const BASE_URL = import.meta.env.VITE_API_URL;
 
-// Export an async function to search for movies by name
+// Export an async function to search for movies by name and returns an arrary of movie objects
 export async function searchMovies(searchTerm: string): Promise<Movie[]> {
   // Wait for the fetch request to get data from the API endpoint
   const response = await fetch(

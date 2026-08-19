@@ -3,6 +3,7 @@ import './App.css'
 import SearchBar from './components/SearchBar/SearchBar'
 import { searchMovies } from './services/movieApi';
 import MovieCard from "./components/MovieCard/MovieCard";
+import MovieList from "./components/MovieList/MovieList";
 import type { Movie } from "./types/Movie";
 
 function App() {
@@ -46,12 +47,8 @@ function App() {
       </button>
 
       <div className="movie-list">
-        {movies.map((movie) => (
-          <MovieCard
-            key={movie.id}
-            movie={movie}
-          />
-        ))}
+        {/* Pass the movies state to MovieList. */}
+      <MovieList movies={movies} />
       </div>
       
     </div>
